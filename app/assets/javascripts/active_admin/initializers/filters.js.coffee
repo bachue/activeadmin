@@ -37,5 +37,5 @@ $(document).on 'ready page:load turbolinks:load', ->
       method: 'POST'
       data: { name: $(@).data('name') }
       success: =>
-        $(@).parents('li').remove()
+        $(@).parents('li').slideUp(300, -> $(@).remove())
     false
