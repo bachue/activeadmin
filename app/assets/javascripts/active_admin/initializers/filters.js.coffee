@@ -2,7 +2,7 @@ $(document).on 'ready page:load turbolinks:load', ->
   # Clear Filters button
   $('.clear_filters_btn').click ->
     params = window.location.search.slice(1).split('&')
-    regex = /^(q\[|q%5B|q%5b|page|commit)/
+    regex = /^(q\[|q%5B|q%5b|page|commit|saved_filter)/
     window.location.search = (param for param in params when not param.match(regex)).join('&')
 
   # Filter form: don't send any inputs that are empty
